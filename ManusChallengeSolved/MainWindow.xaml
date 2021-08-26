@@ -1,0 +1,25 @@
+﻿<Window x:Class="ManusChallengeSolved.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="DarkGray">
+        <ListBox x:Name="lbCities" Margin="50,100" />
+
+        <TextBlock x:Name="tbShortPath" Margin="50,325,50,50" Text="Shortest path found: " FontSize="20" />
+        <TextBlock Margin="50,10,500,380" x:Name="tbText" Text="How many cities to build?" FontSize="20" />
+
+        <TextBox Margin="50,50,500,330" x:Name="tbCityCount" FontSize="20" />
+        <Button x:Name="buttBuild" Margin="300,50,400,330" Content="Build!" FontSize="20" Click="buttBuild_Click" />
+
+        <StackPanel Margin="400,10,50,325">
+            <TextBlock Margin="0,0,0,50" Text="Find shortest path between:" FontSize="20" />
+            <ComboBox x:Name="cbFromCity" Margin="0,-38,250,2" FontSize="20" />
+            <ComboBox x:Name="cbTargetCity"  Margin="100,-38,150,2" FontSize="20" />
+
+            <Button Margin="250,-38,0,2" Content="Find!" FontSize="20" x:Name="buttFindPath" Click="buttFindPath_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
